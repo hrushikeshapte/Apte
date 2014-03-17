@@ -1,0 +1,19 @@
+#default path
+blog_home:
+    path:     /
+    defaults: { _controller: ApteInstagramBundle:Guzzle:index }
+
+#path for showing popular photos
+render_popular:
+    pattern: /showPopular
+    defaults: { _controller: ApteInstagramBundle:HomeController:renderPopular }
+
+#path for showing a particular photo
+show_photo:
+    pattern: /show/{id}
+    defaults: { _controller: ApteInstagramBundle:HomeController:showPhoto }
+
+#duplicate link for root path
+index:
+    pattern: /index
+    defaults: { _controller: ApteInstagramBundle:Guzzle:index }
